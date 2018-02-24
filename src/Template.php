@@ -63,7 +63,8 @@ TEMPLATE;
         return <<<'TEMPLATE'
 
 <style type="text/css"<?php if(isset($media)) print ' media="'.$media.'"';?>>
-    <?= $content ?>
+<?= $content ?>
+
 </style>
 TEMPLATE;
     }
