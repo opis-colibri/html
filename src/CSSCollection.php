@@ -1,0 +1,40 @@
+<?php
+/* ===========================================================================
+ * Copyright 2018 The Opis Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * ============================================================================ */
+
+namespace OpisColibri\Html;
+
+class CSSCollection extends Collection
+{
+    /**
+     * @param string $href
+     * @return CSSCollection|Collection
+     */
+    public function url(string $href): self
+    {
+        return $this->add((new Link())->attribute('href', $href), $href);
+    }
+
+    /**
+     * @param string $content
+     * @param string|null $media
+     * @return CSSCollection|Collection
+     */
+    public function inline(string $content, string $media = null): self
+    {
+        return $this->add(new Style($content, $media), md5($content));
+    }
+}
