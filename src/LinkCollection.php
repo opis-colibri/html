@@ -45,8 +45,8 @@ class LinkCollection extends Collection
      * @param string $href
      * @return LinkCollection|Collection
      */
-    public function icon(string $href): self
+    public function favicon(string $href): self
     {
-        return $this->link('shortcut icon', $href);
+        return $this->link('icon', $href);
     }
 }
