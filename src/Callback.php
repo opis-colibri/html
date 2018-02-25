@@ -19,8 +19,26 @@ namespace OpisColibri\Html;
 
 class Callback
 {
-    public static function viewCallback(string $type)
+    /**
+     * @param string $type
+     * @return string
+     */
+    public static function viewCallback(string $type): string
     {
         return 'template://' . Template::class . '::' . $type;
+    }
+
+    /**
+     * @return Document
+     */
+    public static function bindHtmlDoc(): Document
+    {
+        static $instance;
+
+        if($instance === null){
+            $instance = new Document();
+        }
+
+        return $instance;
     }
 }
