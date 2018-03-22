@@ -25,7 +25,7 @@ class CSSCollection extends Collection
      */
     public function url(string $href): self
     {
-        return $this->add((new Link())->attribute('href', $href), $href);
+        return $this->add((new Link())->attributes(['href' => $href, 'rel' => 'stylesheet']), $href);
     }
 
     /**
