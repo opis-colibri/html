@@ -25,7 +25,7 @@ class Document extends View
 
     public function __construct()
     {
-        parent::__construct('html', [
+        parent::__construct('html.document', [
             'title' => null,
             'content' => null,
             'base' => null,
