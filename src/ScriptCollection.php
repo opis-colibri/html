@@ -88,7 +88,7 @@ class ScriptCollection extends Collection
     {
         $scripts = array();
         /** @var Script $script */
-        foreach ($this->arguments['items'] as $script){
+        foreach ($this->vars['items'] as $script){
             if ($script->isInBody() === $inBody) {
                 $scripts[] = $script;
             }

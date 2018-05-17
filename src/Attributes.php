@@ -21,7 +21,6 @@ use Opis\Colibri\View;
 
 class Attributes extends View
 {
-
     /**
      * Attributes constructor.
      */
@@ -39,7 +38,7 @@ class Attributes extends View
      */
     public function add(string $name, string $value = null): self
     {
-        $this->arguments['attributes'][$name] = $value;
+        $this->vars['attributes'][$name] = $value;
         return $this;
     }
 }

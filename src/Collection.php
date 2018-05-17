@@ -39,9 +39,9 @@ class Collection extends View
     public function add($item, $entry = null): self
     {
         if ($entry === null) {
-            $this->arguments['items'][] = $item;
+            $this->vars['items'][] = $item;
         } else {
-            $this->arguments['items'][$entry] = $item;
+            $this->vars['items'][$entry] = $item;
         }
         return $this;
     }
@@ -51,8 +51,8 @@ class Collection extends View
      */
     public function merge(Collection $collection)
     {
-        $array1 = $this->arguments['items'];
-        $array2 = $collection->arguments['items'];
-        $this->arguments['items'] = array_merge($array1, $array2);
+        $array1 = $this->vars['items'];
+        $array2 = $collection->vars['items'];
+        $this->vars['items'] = array_merge($array1, $array2);
     }
 }

@@ -79,7 +79,7 @@ class Script extends View
     public function attribute(string $name, $value = null): self
     {
         /** @var Attributes $attributes */
-        $attributes = $this->arguments['attributes'];
+        $attributes = $this->vars['attributes'];
         $attributes->add($name, $value);
         return $this;
     }
