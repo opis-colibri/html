@@ -23,7 +23,7 @@ class Template
     {
         return <<<'TEMPLATE'
 <?php
-$list = [];
+$list = [''];
 foreach ($attributes as $attribute => $value) {
     if ($value === null) {
         $list[] = $attribute;
@@ -46,7 +46,7 @@ TEMPLATE;
     {
         return <<<'TEMPLATE'
 
-<meta <?= $attributes ?>>
+<meta<?= $attributes ?>>
 TEMPLATE;
     }
 
@@ -54,7 +54,7 @@ TEMPLATE;
     {
         return <<<'TEMPLATE'
 
-<link <?= $attributes ?>>
+<link<?= $attributes ?>>
 TEMPLATE;
     }
 
@@ -73,7 +73,7 @@ TEMPLATE;
     {
         return <<<'TEMPLATE'
 
-<script <?= $attributes ?>><?= $content ?? '' ?></script>
+<script<?= $attributes ?>><?= $content ?? '' ?></script>
 TEMPLATE;
     }
 
@@ -81,7 +81,7 @@ TEMPLATE;
     {
         return <<<'TEMPLATE'
 <!DOCTYPE html>
-<html <?= $htmlAttributes ?? '' ?>>
+<html<?= $htmlAttributes ?? '' ?>>
 <head>
     <?php if(isset($base)): ?>
         <base href="<?= $base ?>">
@@ -94,7 +94,7 @@ TEMPLATE;
     <?= $styles ?>
     <?= $scripts->headScripts() ?>
 </head>
-<body <?= $bodyAttributes ?? '' ?>>
+<body<?= $bodyAttributes ?? '' ?>>
 <?= $content ?>
 <?= $scripts->bodyScripts() ?>
 </body>
