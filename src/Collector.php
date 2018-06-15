@@ -18,7 +18,7 @@
 namespace OpisColibri\Html;
 
 use Opis\Colibri\Collector as AbstractCollector;
-use Opis\Colibri\ItemCollectors\RouteCollector;
+use Opis\Colibri\ItemCollectors\RouteGlobalsCollector;
 use Opis\Colibri\ItemCollectors\ViewCollector;
 
 class Collector extends AbstractCollector
@@ -33,10 +33,10 @@ class Collector extends AbstractCollector
     }
 
     /**
-     * @param RouteCollector $route
+     * @param RouteGlobalsCollector $global
      */
-    public function routes(RouteCollector $route)
+    public function routeGlobals(RouteGlobalsCollector $global)
     {
-        $route->bind('htmldoc', Callback::class . '::bindHtmlDoc');
+        $global->bind('htmldoc', Callback::class . '::bindHtmlDoc');
     }
 }
