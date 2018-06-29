@@ -31,7 +31,13 @@ class RenderTest extends BaseClass
         $attributes = new Attributes();
         $attributes->add('foo')
             ->add('bar', 'baz');
-        $this->assertEquals('foo bar="baz"', render($attributes));
+        $this->assertEquals(' foo bar="baz"', render($attributes));
+    }
+
+    public function testEmptyAttributes()
+    {
+        $attributes = new Attributes();
+        $this->assertEquals('', render($attributes));
     }
 
     public function testStyle()
