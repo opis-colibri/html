@@ -15,7 +15,7 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Html;
+namespace Opis\Colibri\Modules\Html;
 
 class Callback
 {

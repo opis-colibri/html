@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "OpisColibri\\Html\\": "src/"
+            "Opis\\Colibri\\Modules\\Html\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "OpisColibri\\Html\\Test\\": "tests/"
+            "Opis\\Colibri\\Modules\\Html\\Test\\": "tests/"
         }
     },
     "config": {
@@ -35,7 +35,7 @@
     "extra": {
         "module": {
             "title": "HTML",
-            "collector": "OpisColibri\\Html\\Collector"
+            "collector": "Opis\\Colibri\\Modules\\Html\\Collector"
         },
         "branch-alias": {
             "dev-master": "1.0.x-dev"

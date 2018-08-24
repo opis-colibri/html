@@ -15,14 +15,14 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Html\Test;
+namespace Opis\Colibri\Modules\Html\Test;
 
 use function Opis\Colibri\Functions\render;
-use OpisColibri\Html\Attributes;
-use OpisColibri\Html\Link;
-use OpisColibri\Html\Meta;
-use OpisColibri\Html\Script;
-use OpisColibri\Html\Style;
+use Opis\Colibri\Modules\Html\Attributes;
+use Opis\Colibri\Modules\Html\Link;
+use Opis\Colibri\Modules\Html\Meta;
+use Opis\Colibri\Modules\Html\Script;
+use Opis\Colibri\Modules\Html\Style;
 
 class RenderTest extends BaseClass
 {

@@ -15,7 +15,7 @@
  * limitations under the License.
  * ============================================================================ */
 
-namespace OpisColibri\Html\Test;
+namespace Opis\Colibri\Modules\Html\Test;
 
 use Opis\Colibri\Application;
 use PHPUnit\Framework\TestCase;
