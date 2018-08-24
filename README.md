@@ -12,7 +12,7 @@ This modules provides implementation for the following views: `html.document`,
 ### routes
 
 This module provides a global binding, named `htmldoc`, that will return
-a singleton instance of the `OpisColibri\Html\Document` class.
+a singleton instance of the `Opis\Colibri\Modules\Html\Document` class.
 
 
 ## How to use it
@@ -20,7 +20,7 @@ a singleton instance of the `OpisColibri\Html\Document` class.
 Here is some basic usage for this module
 
 ```php
-use OpisColibri\Html\Document as HtmlDoc;
+use Opis\Colibri\Modules\Html\Document as HtmlDoc;
 
 $doc = new HtmlDoc();
 
@@ -67,7 +67,7 @@ $doc->base('/foo');
 ```
 
 You can add meta tags to document by using the various methods
-provided by the `OpisColibri\Html\MetaCollection` class. To access
+provided by the `Opis\Colibri\Modules\Html\MetaCollection` class. To access
 the meta collection instance, just call the `meta` method on the
 document instance.
 
@@ -92,7 +92,7 @@ $doc->meta()
 ```
 
 Adding link tags to you document is done with the help of `links` method,
-which returns an `OpisColibri\Html\LinkCollection` instance. The returned
+which returns an `Opis\Colibri\Modules\Html\LinkCollection` instance. The returned
 instance provides various methods for adding link tags to your page.
 
 ```php
