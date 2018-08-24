@@ -38,10 +38,7 @@
     "extra": {
       "module": {
         "title": "HTML",
-        "collector": {
-          "class": "OpisColibri\\Html\\Collector",
-          "file": "src/Collector.php"
-        }
+        "collector": "OpisColibri\\Html\\Collector"
       },
       "branch-alias": {
         "dev-master": "1.0.x-dev"
