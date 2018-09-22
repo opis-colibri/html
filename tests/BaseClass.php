@@ -17,16 +17,24 @@
 
 namespace Opis\Colibri\Modules\Html\Test;
 
-use Opis\Colibri\Application;
-use PHPUnit\Framework\TestCase;
+use Opis\Colibri\Testing\ApplicationTestCase;
+use Opis\Colibri\Testing\Builders\ApplicationBuilder;
 
-class BaseClass extends TestCase
+class BaseClass extends ApplicationTestCase
 {
-    /** @var Application */
-    protected $app;
-
-    public function setUp()
+    /**
+     * @inheritDoc
+     */
+    protected static function vendorDir(): string
     {
-        $this->app = include __DIR__ . '/app/app.php';
+        return __DIR__ . '/../vendor';
+    }
+
+    /**
+     * @inheritDoc
+     */
+    protected static function applicationSetup(ApplicationBuilder $builder)
+    {
+        $builder->addEnabledModuleFromPath(__DIR__ . '/../');
     }
 }
