@@ -17,6 +17,8 @@
 
 namespace Opis\Colibri\Modules\Html;
 
+use Opis\Colibri\Rendering\TemplateStream;
+
 class Callback
 {
     /**
@@ -25,7 +27,7 @@ class Callback
      */
     public static function viewCallback(string $type): string
     {
-        return 'template://' . Template::class . '::' . $type;
+        return TemplateStream::url('callback', Template::class . '::' . $type, 'php');
     }
 
     /**
