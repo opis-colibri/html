@@ -83,16 +83,12 @@ TEMPLATE;
 <!DOCTYPE html>
 <html<?= $htmlAttributes ?? '' ?>>
 <head>
-    <?php if(isset($base)): ?>
-        <base href="<?= $base ?>">
-    <?php endif ?>
-    <?php if(isset($title)): ?>
-        <title><?= $title ?></title>
-    <?php endif; ?>
-    <?= $meta ?>
-    <?= $links ?>
-    <?= $styles ?>
-    <?= $scripts->headScripts() ?>
+<?php if(isset($base)): ?><base href="<?= $base ?>"><?php endif ?>
+<?php if(isset($title)): ?><title><?= $title ?></title><?php endif; ?>
+<?= $meta ?>
+<?= $links ?>
+<?= $styles ?>
+<?= $scripts->headScripts() ?>
 </head>
 <body<?= $bodyAttributes ?? '' ?>>
 <?= $content ?>

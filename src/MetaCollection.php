@@ -97,7 +97,7 @@ class MetaCollection extends Collection
      * @param callable|null $callback
      * @return MetaCollection|Collection
      */
-    public function viewport(string $viewport = 'width=device-width, initial-scale=1', callable $callback = null): self
+    public function viewport(string $viewport = 'width=device-width, initial-scale=1, shrink-to-fit=no', callable $callback = null): self
     {
         $meta = new Meta();
         $meta->attributes(array(
