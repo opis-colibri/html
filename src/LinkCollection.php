@@ -49,4 +49,13 @@ class LinkCollection extends Collection
     {
         return $this->link('icon', $href);
     }
+
+    /**
+     * @param string $href
+     * @return LinkCollection
+     */
+    public function canonical(string $href): self
+    {
+        return $this->link('canonical', $href);
+    }
 }
