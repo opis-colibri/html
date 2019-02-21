@@ -72,7 +72,7 @@ class MetaCollection extends Collection
             $callback($meta);
         }
 
-        return $this->add($meta, 'http-equiv-' . strtotime($type));
+        return $this->add($meta, 'http-equiv-' . strtolower($type));
     }
 
     /**
@@ -119,7 +119,7 @@ class MetaCollection extends Collection
      */
     public function contentType(string $value, callable $callback = null): self
     {
-        return $this->add($this->createContentMeta('http-equiv', 'content-type', $value, $callback), 'content-type');
+        return $this->httpEquiv('content-type', $value, $callback);
     }
 
     /**
@@ -129,7 +129,7 @@ class MetaCollection extends Collection
      */
     public function defaultStyle(string $value, callable $callback = null): self
     {
-        return $this->add($this->createContentMeta('http-equiv', 'default-style', $value, $callback), 'default-style');
+        return $this->httpEquiv('default-style', $value, $callback);
     }
 
     /**
@@ -139,7 +139,7 @@ class MetaCollection extends Collection
      */
     public function refresh(string $value, callable $callback = null): self
     {
-        return $this->add($this->createContentMeta('http-equiv', 'refresh', $value, $callback), 'refresh');
+        return $this->httpEquiv('refresh', $value, $callback);
     }
 
     /**
