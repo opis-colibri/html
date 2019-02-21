@@ -80,7 +80,7 @@ class MetaCollection extends Collection
      * @param callable|null $callback
      * @return MetaCollection|Collection
      */
-    public function charset(string $charset = 'UTF-8', callable $callback = null): self
+    public function charset(string $charset = 'utf-8', callable $callback = null): self
     {
         $meta = new Meta();
         $meta->attribute('charset', $charset);
