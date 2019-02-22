@@ -34,28 +34,43 @@ class LinkCollection extends Collection
     /**
      * @param string $rel
      * @param string $href
+     * @param callable|null $callback
+     * @param string|null $entry
      * @return LinkCollection|Collection
      */
-    public function link(string $rel, string $href): self
+    public function link(string $rel, string $href, callable $callback = null, string $entry = null): self
     {
-        return $this->add((new Link())->attributes(['rel' => $rel, 'href' => $href]), md5($rel . $href));
+        $link = new Link();
+
+        $link->attributes([
+            'rel' => $rel,
+            'href' => $href
+        ]);
+
+        if ($callback !== null) {
+            $callback($link);
+        }
+
+        return $this->add($link, $entry);
     }
 
     /**
      * @param string $href
+     * @param callable|null $callback
      * @return LinkCollection|Collection
      */
-    public function favicon(string $href): self
+    public function favicon(string $href, callable $callback = null): self
     {
-        return $this->link('icon', $href);
+        return $this->link('icon', $href, $callback);
     }
 
     /**
      * @param string $href
-     * @return LinkCollection
+     * @param callable|null $callback
+     * @return LinkCollection|Collection
      */
-    public function canonical(string $href): self
+    public function canonical(string $href, callable $callback = null): self
     {
-        return $this->link('canonical', $href);
+        return $this->link('canonical', $href, $callback, 'canonical');
     }
 }
